@@ -7,7 +7,20 @@
     <title>Vite App</title>
   </head>
   <body>
-    <video id="video"></canvas>
+    <p>
+      After clicking the button below, a "portrait mode" video from your camera
+      should start. This works on Chrome and Desktop Safari, but fails on Mobile
+      Safari, where the <code>aspectRatio</code> request is ignored.
+    </p>
+    <p>
+      According to the way that the API for <code>getUserMedia</code> is
+      written, it seems that the returned <code>Promise</code> should be
+      rejected when the requirements cannot be fulfilled. However, this doesn't
+      happen; it just silently refuses to honor the request.
+    </p>
+
+    <button id="start-button">Start Video Feed</button>
+
     <script type="module" src="/main.js"></script>
   </body>
 </html>
