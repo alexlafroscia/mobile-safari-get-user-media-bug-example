@@ -3,17 +3,14 @@ const START_BUTTON = document.getElementById("start-button");
 async function startVideoStream() {
   const video = document.createElement("video");
   video.playsInline = true;
+  video.autoplay = true;
+  video.controls = false;
 
   const container = START_BUTTON.parentElement;
 
   // Swap the `button` for the `video`
   container.append(video);
   container.removeChild(START_BUTTON);
-
-  // Automatically play once the video stream is ready
-  video.addEventListener("loadeddata", () => {
-    video.play();
-  });
 
   // Get access to the video camrea stream
   const mediaStream = await navigator.mediaDevices.getUserMedia({
