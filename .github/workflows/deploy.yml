@@ -34,11 +34,12 @@ jobs:
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
+        id: configure-pages
 
       - name: Install and Build 🔧
         run: |
           yarn
-          yarn build
+          yarn build --base=${{ steps.configure-pages.outputs.base_path }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
