@@ -2,6 +2,7 @@ const START_BUTTON = document.getElementById("start-button");
 
 async function startVideoStream() {
   const video = document.createElement("video");
+  video.playsInline = true;
 
   const container = START_BUTTON.parentElement;
 
