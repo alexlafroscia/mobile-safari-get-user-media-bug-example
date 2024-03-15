@@ -19,7 +19,7 @@ async function startVideoStream() {
       aspectRatio: {
         exact: 2 / 3,
       },
-      facingMode: "environment",
+      facingMode: "user",
     },
   });
 
