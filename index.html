@@ -12,6 +12,11 @@
         align-items: center;
       }
 
+      pre:has(code) {
+        background-color: lightgray;
+        padding: 1em;
+      }
+
       video {
         aspect-ratio: 2 / 3;
         width: 50%;
@@ -31,6 +36,16 @@
       rejected when the requirements cannot be fulfilled. However, this doesn't
       happen; it just silently refuses to honor the request.
     </p>
+
+    <h2>Diagnostics</h2>
+
+    <h3><code>getSupportedConstraints</code></h3>
+
+    <pre><code id="supported-constraints"></code></pre>
+
+    <hr />
+
+    <h2>Reproduction</h2>
 
     <button id="start-button">Start Video Feed</button>
 

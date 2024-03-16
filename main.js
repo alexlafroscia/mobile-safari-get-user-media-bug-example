@@ -30,3 +30,15 @@ async function startVideoStream() {
 START_BUTTON.addEventListener("click", () => {
   startVideoStream();
 });
+
+/* === View Supported Constraints === */
+
+const SUPPORTED_CONSTRAINTS_DISPLAY = document.getElementById(
+  "supported-constraints"
+);
+
+SUPPORTED_CONSTRAINTS_DISPLAY.innerText = JSON.stringify(
+  navigator.mediaDevices.getSupportedConstraints(),
+  null,
+  2
+);
